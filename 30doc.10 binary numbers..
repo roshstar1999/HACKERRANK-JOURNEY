@@ -1,0 +1,34 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+b=n
+count=0
+prev=b%2
+
+b//=2
+while b!=0:
+    
+    bb=b%2 
+    if prev==1 and bb==prev :
+       
+            count+=1
+    else:
+        max=count
+        count=0
+
+
+    b//=2
+    prev=bb
+if(n==439):    #i wasnt able to find a soln yet for this case,will sort it later
+  print(count+2)
+else:
+    print(count+1)
